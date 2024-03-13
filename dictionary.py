@@ -18,6 +18,8 @@ class Dictionary:
         word = userIn.lower().strip(" ")
         translation = t.handleTranslate(word)
         return translation
-    def translateWordWildCard(self):
-        pass
+    def translateWordWildCard(self, userIn):
+        word = userIn.lower().strip(" ")
+        translations = t.handleWildCard(word)
+        return translations
 

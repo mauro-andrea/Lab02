@@ -49,4 +49,13 @@ class Translator:
 
     def handleWildCard(self,query):
         # query is a string with a ? --> <par?la_aliena>
-        pass
+        fields = query.split("?")
+        translations = []
+
+        for key in self.dictionary.keys():
+            if (key.__contains__(fields[0])) and (key.__contains__(fields[1])) :
+                tupla_temp = (key, self.dictionary[key])
+                translations.append(tupla_temp)
+
+        return translations
+

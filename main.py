@@ -26,7 +26,12 @@ while(exit == False):
         print(f"{d.translate(txtIn)}")
 
     elif int(txtIn) == 3:
-        pass
+        print("Ok, quale parola devo cercare? \n ")
+        txtIn = input("")
+        searchResult = d.translateWordWildCard(txtIn)
+        print(f"{searchResult}")
+
+
     elif int(txtIn) == 4:
         exit = True
         break
